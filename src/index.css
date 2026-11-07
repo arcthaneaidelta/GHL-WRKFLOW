@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #F6F7F5;
+    --bg-secondary: #EEF1EE;
+    --primary-surface: #FFFFFF;
+    --sidebar-bg: #172522;
+    --sidebar-secondary: #21332E;
+    --primary-text: #202B27;
+    --secondary-text: #697670;
+    --muted-text: #929C96;
+    --primary-accent: #527D6B;
+    --accent-light: #E7F0EA;
+    --border: #E5E9E5;
+    --success: #398568;
+    --warning: #B58A49;
+    --error: #C16D67;
+    --information: #65849A;
+  }
+
+  body {
+    background-color: #F6F7F5;
+    color: #202B27;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D2D8D2;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #929C96;
+  }
+}
+
+/* Animations helper */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
